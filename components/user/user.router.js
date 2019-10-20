@@ -1,7 +1,6 @@
 const { POST, GET, PUT } = require('express-object-router/methods');
 const joi = require('joi');
-// const userController = require('./user.controller');
-// const { EVERYONE, USER } = require('../../../lib/user-roles');
+const userController = require('./user.controller');
 
 module.exports = [
   {

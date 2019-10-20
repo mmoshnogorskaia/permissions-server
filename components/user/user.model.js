@@ -18,7 +18,7 @@ const login = async (login) => {
       from: 0,
       size: 1,
       body: query,
-    }).then(res=>console.log(res), err=>console.log(err));
+    });
 
     return response;
   } catch (e) {
