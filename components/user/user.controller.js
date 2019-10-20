@@ -6,6 +6,7 @@ const login = async ({
   body,
 }) => {
   try {
+    console.log('HERE');
     const result = await User.login(body, req);
     reply(result);
   } catch (err) {
