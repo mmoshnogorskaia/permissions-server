@@ -26,7 +26,7 @@ const { createRouter } = require('express-object-router');
 const router = createRouter({
   pathsRelateTo: __dirname,
   routesPaths: [
-    '../../app/components/**/*.router.js',
+    '/**/*.router.js',
   ],
   middlewaresSequence: ({
     PARAMS_VALIDATION,
