@@ -14,7 +14,7 @@ module.exports = [
       },
     },
     middlewaresProps: {
-      // allowAccess: [EVERYONE],
+      allowAccess: [],
     },
   },
 ];
