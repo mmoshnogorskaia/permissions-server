@@ -1,6 +1,7 @@
 const { esclient } = require('../database');
 
-const login = async (login) => {
+const login = async (userData) => {
+  const { login, password } = userData;
   try {
     const query = {
       query: {
@@ -13,12 +14,12 @@ const login = async (login) => {
         },
       },
     };
-    const response = esclient.search({
+    const response = await esclient.get({
+      id: 'info',
       index: login,
-      from: 0,
-      size: 1,
-      body: query,
-    });
+    }).then(res=>console.log(res), e=>console.log(e));
+
+    console.log(response);
 
     return response;
   } catch (e) {
